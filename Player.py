@@ -8,5 +8,3 @@ class Player:
 
     def Choose_gesture(self):
         pass
-
-    

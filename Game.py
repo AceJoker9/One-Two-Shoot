@@ -40,8 +40,8 @@ class Game:
         pass
 
         def player_rolls(self):
-            self.Player_one.Choose_gesture()
-            self.Player_two.Choose_gesture()
+            self.player_one.current_gesture()
+            self.player_one.current_gesture()
             pass
 
 
