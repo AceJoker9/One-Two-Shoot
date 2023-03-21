@@ -5,14 +5,16 @@ from Player import Player
 
 class Game:
     def __init__(self):
-        self.player_one = None
-        self.player_two = None
+        self.player_one = ''
+        self.player_two = ''
         pass
 
 
     def run(self):
         self.game_type()
         self.win_check()
+
+        
 
         pass
 
@@ -39,18 +41,19 @@ class Game:
             self.player_two = AI('Player 2')
         pass
 
-        def player_rolls(self):
-            self.player_one.current_gesture()
-            self.player_one.current_gesture()
-            pass
+    def player_rolls(self):
+        self.player_one.Choose_gesture()
+        self.player_two.Choose_gesture()
+            
+        pass
 
 
-        def win_check(self):
+    def win_check(self):
             while self.player_one.score < 3 and self.player_two.score < 3:
                 self.player_rolls()
                 pass
 
-        def victory_message(self):
+    def victory_message(self):
             pass
 
             
