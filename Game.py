@@ -13,9 +13,6 @@ class Game:
     def run(self):
         self.game_type()
         self.win_check()
-
-        
-
         pass
 
 
@@ -52,6 +49,39 @@ class Game:
             while self.player_one.score < 3 and self.player_two.score < 3:
                 self.player_rolls()
                 pass
+
+    def compare_gets(self):
+        if self.player_one.current_gesture == self.player_two.current_gesture:
+            print('Tie')
+
+        elif self.player_one.current_gesture == self.player_one.gesture_list[0]:
+            if (self.player_two.current_gesture == self.player_one.gesture_list[3] or self.player_two.current_gesture == self.player_one.gesture_list[1]):
+                self.player_one.score += 1
+
+        elif self.player_one.current_gesture == self.player_one.gesture_list[1]:
+            if (self.player_two.current_gesture == self.player_one.gesture_list[3] or self.player_two.current_gesture == self.player_one.gesture_list[2]):
+                self.player_one.score += 1
+
+        elif self.player_one.current_gesture == self.player_one.gesture_list[2]:
+            if (self.player_two.current_gesture == self.player_one.gesture_list[1] or self.player_two.current_gesture == self.player_one.gesture_list[4]):
+                self.player_one.score += 1
+
+        elif  self.player_one.current_gesture == self.player_one.gesture_list[3]:
+            if (self.player_two.current_gesture == self.player_one.gesture_list[2] or self.player_two.current_gesture == self.player_one.gesture_list[4]):
+                self.player_one.score += 1
+
+        else:
+            self.player_one.current_gesture == self.player_one.gesture_list[4]
+            if (self.player_two.current_gesture == self.player_one.gesture_list[1] or self.player_two.current_gesture == self.player_one.gesture_list[0]):
+                self.player_one.score += 1
+            pass
+    
+
+    def round_check(self, int_1, int_2):
+        if (self.player_two.current_gesture == self.player_one.gesture_list[3] or self.player_two.current_gesture == self.player_one.gesture_list[1]):
+            self.player_one.score += 1
+        self.player_two.score += 1
+
 
     def victory_message(self):
             pass

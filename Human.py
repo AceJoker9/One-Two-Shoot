@@ -6,6 +6,8 @@ class Human(Player):
         pass
 
     def Choose_gesture(self):
+        #Had to hard code with if/elif statement to make this function work
+        
         user_selection = ui.validate_to_int(f"""
         {self.name} Please select from the option below:
         Press 1 for {self.gesture_list[0]}
